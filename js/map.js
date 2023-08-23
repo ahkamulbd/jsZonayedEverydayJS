@@ -38,12 +38,27 @@
 
 /* ======= Using map in function in ES 6 with default 3 parameters ======== */
 
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8, 0, 9];
+
+// let newArr = arr.map(function (item, index, fullArr) {
+//     console.log(`Item: ${item}, Index = ${index} and FullArray = ${fullArr}`);
+// });
+
+// console.log(newArr);
+
+/* ======= Determining value of this in map ======== */
+
+const anObject = {
+    name: 'Zarif Abdullah',
+    age: 5
+}
+
 let arr = [1, 2, 3, 4, 5, 6, 7, 8, 0, 9];
 
-let newArr = arr.map(function (item, index, fullArr) {
-    console.log(`Item: ${item}, Index = ${index} and FullArray = ${fullArr}`);
-});
+arr.map(function (single, index, fullArr) {
+    console.log(this);
+}, anObject);
 
-console.log(newArr);
+
 
 
